@@ -1,0 +1,21 @@
+name: react build
+on: 
+  push:                               
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04 
+    steps:
+      - name: repository checkout
+        uses: actions/checkout@master
+
+      - name: install dependency
+        run: npm install
+
+      - name: build react
+        run: npm run build
+
+      - name: test
+        run: ls
