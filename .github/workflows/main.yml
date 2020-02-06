@@ -12,4 +12,4 @@ jobs:
         run: echo "Hello1"
 
       - name: ls 테스트 ~!    
-        run: echo "Hello2"
+        run: ls -al
