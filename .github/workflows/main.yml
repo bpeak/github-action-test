@@ -1,21 +1,18 @@
-name: react build
+name: my frist github actions
 on: 
-  push:                               
+  push:                               # master branch push 시에 실행
     branches:
       - master
 
 jobs:
   build:
-    runs-on: ubuntu-18.04 
+    runs-on: ubuntu-18.04 # machine 환경 ( https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions#jobsjob_idruns-on ) 에 자세히 나와있음
     steps:
-      - name: repository checkout
+      - name: repository checkout~!  # 레포지토리 체크아웃 ( machine 은 workflow 때마다 항상 새롭게 구축되서 아무것도 없음 내소스 가져오는 행위임 )
         uses: actions/checkout@master
 
-      - name: install dependency
-        run: npm install
+      - name: 에코 테스트1~!
+        run: echo "Hello there1"
 
-      - name: build react
-        run: npm run build
-
-      - name: test
-        run: ls
+      - name: 에코 테스트2~!    
+        run: echo "Hello there2"

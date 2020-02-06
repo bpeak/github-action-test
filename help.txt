@@ -1,0 +1,37 @@
+< cp -r test1 test2
+
+
+이번에 공부한 Github Actions 와 관련된 내용을 공유하려함
+
+< Github Actions 를 활용한 CI/CD >
+
+CI/CD ?
+기존의 Circle CI, Travis CI, Jenkins 와 같은 툴
+다만 Github 내에서 관리부터 배포자동화까지 한번에!
+( * 주의 나는 CI/CD 경험이 없어서 비교는 못함 * )
+
+이번시간에 같이 해볼것은?
+Github Actions 을 이용한 React S3 배포자동화
+
+전제 github actions S3 를 모른다고 가정했음
+
+흐름
+1) 배포하기
+2) 배포하기를 자동화하기
+
+1단계 S3를 이용한 배포
+
+1) 배포란?
+2) S3에 수동배포
+3) S3에 자동(CLI)배포
+    3-1) aws cli -> 설명서 -> 사용 설명서
+    3-2) aws cli 설치
+    3-3) aws 서비스와 함께 aws cli 사용
+    3-4) linux cp 사용 -> aws cp 사용
+
+2단게 github actions 를 이용한 자동화 ( S3에 자동배포하는 저 행위를 git push 되는 타이밍에 하고싶은것 )
+
+1) create-react-app my-app
+2) yml추가 github actions getting started -> configuring a workflow --> [ creating a workflow file ] [ filter, Filtering for specific branches, tags, and paths ] [ Choosing a runner ]
+3) git init add commit remote add origin master push origin master
+4) github 에서 actions 들어가서 확인
