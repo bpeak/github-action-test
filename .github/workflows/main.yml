@@ -1,4 +1,4 @@
-name: React build
+name: my frist github actions
 on: 
   push:                               # master Branch에서 push 이벤트가 일어났을 때만 실행
     branches:
@@ -8,11 +8,8 @@ jobs:
   build:
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout source code.   # 레포지토리 체크아웃
+      - name: 레포지터리 체크아웃!  # 레포지토리 체크아웃
         uses: actions/checkout@master
 
-      - name: Install Dependencies    # 의존 파일 설치
-        run: npm install
-
-      - name: Build                   # React Build
-        run: npm run build
+      - name: 에코 테스트    # 의존 파일 설치
+        run: echo "Hello there"
