@@ -1,15 +1,21 @@
-name: my frist github actions
+name: react build
 on: 
-  push:                           
+  push:                               
     branches:
       - master
 
 jobs:
-  my-frist-job:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-18.04 
     steps:
-      - name: 에코 테스트 ~!
-        run: echo "Hello1"
+      - name: repository checkout
+        uses: actions/checkout@master
 
-      - name: ls 테스트 ~!    
-        run: ls -al
+      - name: install dependency
+        run: npm install
+
+      - name: build react
+        run: npm run build
+
+      - name: test
+        run: ls
