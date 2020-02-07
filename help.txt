@@ -1,7 +1,11 @@
 < cp -r test1 test2
 
+aws2 s3 cp test  s3://kh-bucket --recursive --acl public-read
 
 이번에 공부한 Github Actions 와 관련된 내용을 공유하려함
+
+중간주간 잘못된 부분이 있거나
+궁금한점이 있으면 바로바로 피드백 주셔도 좋을것 같습니다.
 
 < Github Actions 를 활용한 CI/CD >
 
