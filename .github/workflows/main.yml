@@ -1,4 +1,4 @@
-name: react build
+name: react build!
 on: 
   push:                               
     branches:
