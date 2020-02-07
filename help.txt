@@ -39,3 +39,15 @@ Github Actions 을 이용한 React S3 배포자동화
 2) yml추가 github actions getting started -> configuring a workflow --> [ creating a workflow file ] [ filter, Filtering for specific branches, tags, and paths ] [ Choosing a runner ]
 3) git init add commit remote add origin master push origin master
 4) github 에서 actions 들어가서 확인
+
+이렇게해서 github actions 를 이용한 CI/CD 를 한번 다뤄보면서 제가 느낀것은
+CI/CD 관점에서는
+1) CI/CD 는 너무좋다 ( 개발하고싶어짐 )
+
+github actions 관점에서는
+1) 너무 쉽고 간단하게 도입 가능 ( 문서보고 yml 하나 작성하면 끝 )
+2) 코드관리와 CI/CD 를 github 하나로 다 해결할 수 있다는점
+
+지금은 push 했을때 deploy 하는 작업을 진행해봤지만
+push 나 pr 시에 test 를 돌릴 수도 있고
+특정 브랜치에 merge 됐을때 deploy 할수도 있는둥 여러가지 많음
