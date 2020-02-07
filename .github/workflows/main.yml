@@ -1,4 +1,4 @@
-name: react build!
+name: react build
 on: 
   push:                               
     branches:
@@ -17,5 +17,8 @@ jobs:
       - name: build react
         run: npm run build
 
-      - name: test
-        run: ls
+      - name: deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_KEY_ID }}      
+        run: aws s3 cp --recursive build s3://kh-bucket --acl public-read
