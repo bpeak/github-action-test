@@ -1,4 +1,4 @@
-name: 빌드
+name: my frist github actions
 on: 
   push:                           
     branches:
